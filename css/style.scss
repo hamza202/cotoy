@@ -447,7 +447,10 @@ a {
   overflow: hidden;
   border-radius: 30px;
 }
+#player{
+  border-radius: 30px;
 
+}
 .main-title {
   color: $orange;
   font-size: 30px;
@@ -497,7 +500,7 @@ a {
     color: #212529;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #686868;
+    border: 1px solid #c3c3c3;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -543,6 +546,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 0;
   margin-bottom: 0;
   a{
+    max-width: 250px;
     align-items: center;
     color: white;
     justify-content: flex-end;
@@ -596,5 +600,34 @@ input[type=number]::-webkit-outer-spin-button {
     &:hover{
       background-color: $orange;
     }
+  }
+}
+.our-details{
+  align-items: center;
+  @include media-breakpoint-down(lg) {
+    justify-content: center;
+  }
+  h4{
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    font-weight: 500;
+    padding-top: 15px;
+    margin-inline-end: 10px;
+    color:#ffcb7b;
+    font-size: 18px;
+  }
+}
+.plyr__video-wrapper{z-index: 0;}
+.plyr__poster{
+  background-size: cover;
+}
+.plyr--full-ui.plyr--video .plyr__control--overlaid{
+    opacity: 0.6 ;
+  padding: 35px;
+  background-color: rgba(0,0,0,0.5);
+  svg{
+    width: 50px;
+    height: 50px;
   }
 }
